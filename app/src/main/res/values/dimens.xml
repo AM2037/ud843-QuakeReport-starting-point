@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin">16dp</dimen>
+    <dimen name="padding">16dp</dimen>
+    <dimen name="magnitude">36dp</dimen>
+    <dimen name="radius">18dp</dimen>
+    <dimen name="text">16sp</dimen>
+    <dimen name="text2">12sp</dimen>
+    <dimen name="divider">0dp</dimen>
+</resources>

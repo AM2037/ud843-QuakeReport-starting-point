@@ -11,6 +11,7 @@ import java.util.ArrayList;
 /**
  * Helper methods related to requesting and receiving earthquake data from USGS.
  */
+@SuppressWarnings("ALL")
 public final class QueryUtils {
 
     /** Sample JSON response for a USGS query */
@@ -61,12 +62,14 @@ public final class QueryUtils {
             for(int i = 0; i < earthquakeArray.length(); i++){
                 JSONObject currentEarthquake = earthquakeArray.getJSONObject(i);
                 JSONObject properties = currentEarthquake.getJSONObject("properties");
-                String magnitude = properties.getString("mag");
+                double magnitude = properties.getDouble("mag");
                 String location = properties.getString("place");
                 long time = properties.getLong("time");
+                String url = properties.getString("url");
+
 
                 // Create new Earthquake object from these three strings
-                Earthquake earthquake = new Earthquake(magnitude, location, time);
+                Earthquake earthquake = new Earthquake(magnitude, location, time, url);
                 earthquakes.add(earthquake);
             }
 
