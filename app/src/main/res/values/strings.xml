@@ -16,4 +16,6 @@
 <resources>
     <string name="app_name">Quake Report</string>
     <string name="offset_alternative">near the</string>
+    <string name="no_earthquakes">No earthquakes found.</string>
+    <string name="no_internet_connection">No internet connection.</string>
 </resources>
